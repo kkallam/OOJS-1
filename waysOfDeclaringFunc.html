@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ways of Declaring Functions</title>
+</head>
+<body>
+	
+
+	<script type="text/javascript">
+		
+		/*var sum = sumNumbers(40,30);
+		document.write("The sum of Numbers is: "+ sum);*/
+
+		/* **************** Anonymus/ function expression Function **************** */
+		// This doesn't support function hoisting.
+		var sumNumbers = function(a,b){
+			var result = a + b;
+			return result;
+		}
+		
+		var sum = sumNumbers(40,30);
+		document.write("The sum of Numbers is: "+ sum);
+		/* **************** End Anonymus Function **************** */
+
+
+
+		/* **************** Name function expression **************** */
+		// This doesn't support function hoisting
+		
+		var facto = function factorialNumber(n){
+			if (n<=1){
+				return 1;
+			}
+			return  n * factorialNumber(n-1);
+		}
+		var result = facto(6);
+		document.write("<br/>The sum of Numbers is: "+ result);
+
+	</script>
+</body>
+</html>

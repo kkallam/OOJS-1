@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Closures Example</title>
+</head>
+<body>
+	<button onclick="alert(counter())">Click Me</button>
+
+	<script type="text/javascript">
+		// In this way we can increment the counter.Cons:- some times we don't want to change the global variables.
+		/*var myNumber = 0;        
+		function counter(){
+			return ++myNumber;
+		}*/
+
+
+		// this one always print 1 as we are calling the counter functon and it's initializing myNumber to 0;
+		/*function counter(){
+			var myNumber = 0; 
+			return ++myNumber;
+		}*/
+
+
+		// Closures. We can keep the Global variables constant and change in local functions.
+		var counter= (function(){
+			var myNumber = 0; 
+			return function(){
+				return ++myNumber;
+			}
+			
+		})();
+
+	</script>
+</body>
+</html>

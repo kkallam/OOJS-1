@@ -1,0 +1,52 @@
+<!-- 
+We can not use abstract class instance directly. 
+But we can create new constructor function and inheritance it from Abstract Class.
+ Then we can use the functionality of Abstract Class. 
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Abstract Class</title>
+</head>
+<body>
+	
+
+	<script type="text/javascript">
+
+	var Animal = function () { 
+		this.name = "this animal";
+		this.sound= "...";
+		throw "abstract class!" 
+	}
+	Animal.prototype.say = function() {
+	    document.write("<br/>"+ this.name + " says: " + this.sound );
+	}
+
+	var Cat = function () {
+	    this.name = "Cat";
+	    this.sound = "meow";
+	}
+
+	var Dog = function() {
+	    this.name = "Dog";
+	    this.sound  = "Bow";
+	}
+
+	Cat.prototype = Object.create(Animal.prototype);
+	Dog.prototype = Object.create(Animal.prototype);
+
+	/*var ncat = new Cat;
+	var ndog = new Dog;
+	ncat.say();
+	ndog.say();*/
+	new Cat().say();    //Cat says: meow
+	new Dog().say();    //Dog says: woof 
+	//new Animal().say(); //Uncaught abstract class! 
+
+
+
+	</script>
+</body>
+</html>

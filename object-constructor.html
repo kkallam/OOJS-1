@@ -1,0 +1,35 @@
+<!-- 
+
+	bject constructor -   when you need multiple instances of object, use this.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Object-Constructor</title>
+</head>
+<body>
+	<div>
+		
+	</div>
+
+	<script type="text/javascript">
+		var emp = function(){
+			this.name = "koti";
+		}
+
+		var employee = new emp();
+		var newEmployee = new emp();
+
+		document.write("Employee Name is: "+ employee.name+"<br/>");
+		document.write(" New Employee Name is: "+ newEmployee.name+"<br/>");
+
+		newEmployee.name = "Vennela";
+
+		document.write("Employee Name is: "+ employee.name+"<br/>");
+		document.write(" New Employee Name is: "+ newEmployee.name+"<br/>");
+
+	</script>
+</body>
+</html>

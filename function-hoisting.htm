@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Function- Hoisting</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+		function addNumber(a,b){
+			var result = a+b;
+			return result;
+		}
+
+		var sum = addNumber(20,30);
+		document.write("The sum of numbers is: "+sum);
+
+
+		/* Hoisting is Javascript by default moves all the function declrations to the top of the scope. This is the reason Javascript function can be called before they are declared */
+
+		var diff = DiffNumber(20,30);
+		document.write("<br/>The Difference between numbers is: "+ diff);
+
+		 function DiffNumber(a,b){
+		 	var result = a-b;
+		 	return result;
+		 }
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!-- 
+	############## Inheritance Example  ##############
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>OO Programing - Inheritance</title>
+</head>
+<body>
+	
+	<div>
+	</div>
+
+	<script type="text/javascript">
+		var Employee = function(firstname, lastname){
+			this.firstname = firstname;
+			this.lastname = lastname;
+		}
+		Employee.prototype.fullname = function(){
+			return this.firstname + "& " + this.lastname;
+		}
+		var emp = new Employee("koti","vennela");
+
+
+
+		var permEmployee = function(salary){
+			this.incrementSal = function(){
+				return this.salary = salary + (salary*10)/100;
+			}
+			
+		}
+		permEmployee.prototype = emp;
+		var pe = new permEmployee(5000);
+
+
+		document.write(pe.fullname()+"<br/>");
+		document.write(pe.incrementSal());	
+		
+	</script>
+</body>
+</html>
